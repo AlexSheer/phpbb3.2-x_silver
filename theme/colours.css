@@ -123,19 +123,19 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
 ----------------------------------------*/
 
 ul.navlinks {
-	color : #395D98;
-	background : #d8e9fe url('./images/pag.png') repeat-x top left;
-	border-bottom : 1px solid #4d6c95;
-	border-right : 1px solid #4d6c95;
-	border-left : 1px solid #4d6c95;
-	border-top : 1px solid #4d6c95;
+	color: #395D98;
+	background: #d8e9fe url('./images/pag.png') repeat-x top left;
+	border-bottom: 1px solid #4d6c95;
+	border-right: 1px solid #4d6c95;
+	border-left: 1px solid #4d6c95;
+	border-top: 1px solid #4d6c95;
 	min-height: 36px;
-	font-family : Verdana, Arial, Helvetica, sans-serif;
-	font-size : 1.1em;
-	font-weight : bold;
-	text-align : left;
-	white-space : nowrap;
-	padding-top : 4px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: left;
+	white-space: nowrap;
+	padding-top: 4px;
 }
 
 /* Table styles
