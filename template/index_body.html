@@ -1,0 +1,105 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- EVENT index_body_markforums_before -->
+<!-- IF U_MARK_FORUMS -->
+	<div class="action-bar compact">
+		<a href="{U_MARK_FORUMS}" class="mark-read rightside" accesskey="m" data-ajax="mark_forums_read">{L_MARK_FORUMS_READ}</a>
+	</div>
+<!-- ENDIF -->
+<!-- EVENT index_body_markforums_after -->
+
+<!-- INCLUDE forumlist_body.html -->
+
+<!-- EVENT index_body_forumlist_body_after -->
+
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<br />
+	<div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4>&nbsp;</h4></div></div></div></div>
+	<form method="post" action="{S_LOGIN_ACTION}">
+	<h4 class="post_head nobottom"><a href="{U_LOGIN_LOGOUT}">&nbsp;{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --></h4>
+		<fieldset class="quick-login">
+			<label for="username"><span>{L_USERNAME}{L_COLON}</span> <input type="text" tabindex="1" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" /></label>
+			<label for="password"><span>{L_PASSWORD}{L_COLON}</span> <input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" autocomplete="off" /></label>
+			<!-- IF U_SEND_PASSWORD -->
+				<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+			<!-- ENDIF -->
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+				<span class="responsive-hide">|</span> <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" tabindex="4" name="autologin" id="autologin" /></label>
+			<!-- ENDIF -->
+			<input type="submit" tabindex="5" name="login" value="{L_LOGIN}" class="button2" />
+			{S_LOGIN_REDIRECT}
+		</fieldset>
+	</form>
+	<div class="c-f-l"><div class="c-f-r"><div class="c-f-c">&nbsp;</div></div></div>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_stat_blocks_before -->
+	<br clear="all" />
+<div><div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4>{L_FORUM} {L_STATISTICS}</h4></div></div></div></div></div>
+<div style="border-left: 1px solid #4D6C95;border-right: 1px solid #4D6C95; border-bottom: 1px solid #4D6C95">
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<div class="stat-block online-list">
+		<!-- IF U_VIEWONLINE --><h6><a class="m-buttons-link2" href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h6><!-- ELSE --><h6>{L_WHO_IS_ONLINE}</h6><!-- ENDIF -->
+		<p style="padding: 4px 4px 4px 70px; margin-bottom: 0px;">
+			<!-- EVENT index_body_block_online_prepend -->
+			{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+			<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF -->
+			<!-- EVENT index_body_block_online_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_birthday_block_before -->
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+	<h6>{L_BIRTHDAYS}</h6>
+	<div class="stat-block birthday-list">
+		<p>
+			<!-- EVENT index_body_block_birthday_prepend -->
+			<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+			<!-- EVENT index_body_block_birthday_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+<!-- IF NEWEST_USER -->
+	<h6>{L_STATISTICS}</h6>
+	<div class="stat-block statistics">
+		<p>
+			<!-- EVENT index_body_block_stats_prepend -->
+			{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+			<!-- EVENT index_body_block_stats_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_stat_blocks_after -->
+</div>
+<div class="c-f-l"><div class="c-f-r"><div class="c-f-c">&nbsp;</div></div></div>
+<div class="legend">
+	<br />
+	<div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4>{L_FORUM} {L_LEGEND}</h4></div></div></div></div>
+	<table class="tablebg_trblx" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="bg2" width="14%" align="center" style="padding:5px"><img src="{T_THEME_PATH}/images/forum_unread.png"></td>
+			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_read.png"></td>
+			<td class="bg2" width="15%" align="center"><img src="{T_THEME_PATH}/images/forum_unread_subforum.png" alt="" /></td>
+			<td class="bg2" width="15%" align="center"><img src="{T_THEME_PATH}/images/forum_read_subforum.png" alt="" /></td>
+			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_unread_locked.png"></td>
+			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_read_locked.png"></td>
+			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_link.png" alt="" /></td>
+		</tr>
+		<tr>
+			<td class="bg2" width="14%" align="center" style="padding:5px"><span>{L_UNREAD_POSTS}</span></td>
+			<td class="bg2" width="14%" align="center"><span>{L_NO_UNREAD_POSTS}</span></td>
+			<td class="bg2" width="15%" align="center"><span>{L_SUBFORUM}<br />{L_UNREAD_POSTS}</span></td>
+			<td class="bg2" width="15%" align="center"><span>{L_SUBFORUM}<br />{L_NO_UNREAD_POSTS}</span></td>
+			<td class="bg2" width="14%" align="center"><span>{L_FORUM_LOCKED}<br />{L_UNREAD_POSTS}</span></td>
+			<td class="bg2" width="14%" align="center"><span>{L_FORUM_LOCKED}<br />{L_NO_UNREAD_POSTS}</span></td>
+			<td class="bg2" width="14%" align="center"><span>{L_FORUM_LINK}</span></td>
+		</tr>
+	</table>
+	<div class="c-f-l"><div class="c-f-r"><div class="c-f-c"></div></div></div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

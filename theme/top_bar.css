@@ -1,0 +1,176 @@
+/* You have the right to customize this skin as you want as the credits remain in place.
+
+DO NOT REMOVE CREDITS!!!!!!!!!
+
+http://www.phpbb-skin.info/skinlab
+Alpha Trion
+
+*/
+
+
+a.top_bar_button_left:link , a.top_bar_button_left:visited {
+	color : #4d6c95;
+}
+a.top_bar_button_left:hover, a.top_bar_button_left:active {
+	color : #2a4a77;
+}
+.top_bar_button_left {
+	background :  url('./images/top_left.png') no-repeat right 0%;
+	border-left : 1px solid #4d6c95;
+	color : #4d4c46;
+	font-weight : bold;
+	float : left;
+	text-align : center;
+	margin: 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 15px 20px;
+}
+.top_bar_button_left:hover {
+	background :  url('./images/top_left.png') no-repeat right 100%;
+	border-left : 1px solid #4d6c95;
+	color : #cdcdcd;
+	font-weight : bold;
+	float : left;
+	text-align : center;
+	margin : 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 17px 20px;
+	text-decoration : none;
+}
+
+a.top_bar_button_right:link , a.top_bar_button_right:visited {
+	color : #4d6c95;
+}
+a.top_bar_button_right:hover, a.top_bar_button_right:active {
+color : #2a4a77;
+}
+.top_bar_button_right {
+	background :  url('./images/top_right.png') repeat-x left 0%;
+	border-right : 1px solid #4d6c95;
+	color : #4d4c46;
+	font-weight : bold;
+	float : right;
+	text-align : center;
+	margin: 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 15px 20px;
+}
+.top_bar_button_right:hover {
+	background :  url('./images/top_right.png') repeat-x left 100%;
+	border-right : 1px solid #4d6c95;
+	color : #cdcdcd;
+	font-weight : bold;
+	float : right;
+	text-align : center;
+	margin : 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 17px 20px;
+	text-decoration : none;
+}
+
+a.top_bar_button_cl:link , a.top_bar_button_cl:visited {
+	color : #4d6c95;
+}
+a.top_bar_button_cl:hover, a.top_bar_button_cl:active {
+	color : #2a4a77;
+}
+.top_bar_button_cl {
+	background :  url('./images/top_center_left.png') repeat-x right 0%;
+	color : #404040;
+	font-weight : bold;
+	float:left;
+	text-align : center;
+	margin: 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 15px 20px;
+}
+	.top_bar_button_cl:hover {
+	background :  url('./images/top_center_left.png') repeat-x right 100%;
+	color : #cdcdcd;
+	font-weight : bold;
+	text-align : center;
+	margin : 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 17px 20px;
+	text-decoration : none;
+}
+
+a.top_bar_button_cr:link , a.top_bar_button_cr:visited {
+color : #4d6c95;
+}
+a.top_bar_button_cr:hover, a.top_bar_button_cr:active {
+color : #2a4a77;
+}
+.top_bar_button_cr {
+	background :  url('./images/top_center_right.png') no-repeat left 0%;
+	color : #4d4c46;
+	font-weight : bold;
+	float : right;
+	text-align : center;
+	margin: 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 15px 20px;
+}
+
+.top_bar_button_cr:hover {
+	background :  url('./images/top_center_right.png') no-repeat left 100% ;
+	color : #cdcdcd;
+	font-weight : bold;
+	float : right;
+	text-align : center;
+	margin : 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 17px 20px;
+	text-decoration : none;
+}
+/*-------------------- RIGHT RED-------------------------*/
+a.top_bar_button_cr_red:link , a.top_bar_button_cr_red:visited {
+	color : #ff0000;
+}
+a.top_bar_button_cr_red:hover, a.top_bar_button_cr_red:active {
+color : #ff0000;
+}
+.top_bar_button_cr_red {
+	background :  url('./images/top_center_right.png') repeat-x left 0%;
+	color : #4d4c46;
+	font-weight : bold;
+	float : right;
+	text-align : center;
+	margin: 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 17px 20px;
+}
+
+.top_bar_button_cr_red:hover {
+	background :  url('./images/top_center_right.png') repeat-x left 100% ;
+	color : #cdcdcd;
+	font-weight : bold;
+	float : right;
+	text-align : center;
+	margin : 0px 0px 0px 0px;
+	font-size : 12px;
+	padding : 15px 20px 17px 20px;
+	text-decoration : none;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+.top_center {
+	background : url('./images/bg_top_repeat.png') repeat-x left top;
+	border-top : 1px solid #4d6c95;
+	width : 100%;
+	height : 46px;
+	font-weight : bold;
+	font-size : 1.3em;
+	text-align : center;
+	vertical-align : top;
+	white-space : nowrap;
+	overflow : hidden;
+	padding: 0px;
+	margin:0px;
+}
+
+.top_title {
+	color : #4d4c46;
+	margin : 0;
+	padding: 0;
+}

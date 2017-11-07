@@ -1,0 +1,45 @@
+<!-- INCLUDE overall_header.html -->
+
+<form method="post" action="{S_MODE_ACTION}">
+	<div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4>{PAGE_TITLE}</h4></div></div></div>	</div>
+<!-- BEGIN group -->
+<div class="forumbg forumbg-table" style="margin-top: -2px;">
+	<div style="margin: 0px;" class="inner">
+	<table class="table1 show-header" id="team">
+	<thead>
+	<tr style="border-left:1px solid #4D6C95; border-right:1px solid #4D6C95;">
+		<th class="name" data-dfn="{L_RANK}{L_COMMA_SEPARATOR}{L_USERNAME}"><span class="rank-img">{L_RANK}&nbsp;</span><!-- IF group.U_GROUP --><a href="{group.U_GROUP}">{group.GROUP_NAME}</a><!-- ELSE -->{group.GROUP_NAME}<!-- ENDIF --></th>
+		<th class="info">{L_PRIMARY_GROUP}</th>
+		<!-- IF S_DISPLAY_MODERATOR_FORUMS --><th class="info">{L_MODERATOR}</th><!-- ENDIF -->
+	</tr>
+	</thead>
+	<tbody>
+<!-- BEGIN user -->
+	<tr class="<!-- IF group.user.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF group.user.S_INACTIVE --> inactive<!-- ENDIF -->">
+		<td><!-- IF group.user.RANK_IMG --><span class="rank-img">{group.user.RANK_IMG}</span><!-- ELSE --><span class="rank-img">{group.user.RANK_TITLE}</span><!-- ENDIF --><!-- EVENT memberlist_team_username_prepend -->{group.user.USERNAME_FULL}<!-- IF group.user.S_INACTIVE --> ({L_INACTIVE})<!-- ENDIF --><!-- EVENT memberlist_team_username_append --></td>
+		<td class="info"><!-- IF group.user.U_GROUP -->
+			<a<!-- IF group.user.GROUP_COLOR --> style="font-weight: bold; color: #{group.user.GROUP_COLOR}"<!-- ENDIF --> href="{group.user.U_GROUP}">{group.user.GROUP_NAME}</a>
+			<!-- ELSE -->
+				{group.user.GROUP_NAME}
+			<!-- ENDIF --></td>
+		<!-- IF S_DISPLAY_MODERATOR_FORUMS -->
+			<td class="info"><!-- IF group.user.FORUM_OPTIONS --><select style="width: 100%;">{group.user.FORUMS}</select><!-- ELSEIF group.user.FORUMS -->{group.user.FORUMS}<!-- ELSE -->-<!-- ENDIF --></td>
+		<!-- ENDIF -->
+	</tr>
+<!-- BEGINELSE -->
+	<tr class="bg1">
+		<td colspan="3"><strong>{L_NO_MEMBERS}</strong></td>
+	</tr>
+<!-- END user -->
+	</tbody>
+	</table>
+
+	</div>
+</div>
+<!-- END group -->
+<div class="c-f-l"><div class="c-f-r"><div class="c-f-c">&nbsp;</div></div></div>
+</form>
+<div style="padding: 24px 1px 6px 0px;">
+<!-- INCLUDE jumpbox.html -->
+</div>
+<!-- INCLUDE overall_footer.html -->

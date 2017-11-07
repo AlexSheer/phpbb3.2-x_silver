@@ -1,0 +1,34 @@
+.reply
+{
+	height: 29px;
+	width: 103px;
+	background-image: url("./button_topic_reply.png");
+}
+
+.locked
+{
+	height: 29px;
+	width: 103px;
+	background-image: url("./button_topic_locked.png");
+}
+
+.new-topic
+{
+	height: 29px;
+	width: 121px;
+	background-image: url("./button_topic_new.png");
+}
+
+.new-pm
+{
+	height: 29px;
+	width: 110px;
+	background-image: url("./button_new_pm.png");
+}
+
+.forward-pm
+{
+	height: 29px;
+	width: 110px;
+	background-image: url("./button_pm_forward.png");
+}

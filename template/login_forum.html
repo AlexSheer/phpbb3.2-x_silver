@@ -1,0 +1,40 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF FORUM_NAME --><div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4><a class="c-h-link" href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h4></div></div></div></div><!-- ENDIF -->
+
+<form id="login_forum" method="post" action="{S_LOGIN_ACTION}">
+{S_FORM_TOKEN}
+<div class="panel nopadding">
+	<div class="inner">
+	<h4 class="post_head">&nbsp;{L_LOGIN}</h4>
+	<div class="content" style="padding:5px 10px">
+
+		<p>{L_LOGIN_FORUM}</p>
+
+		<fieldset class="fields1">
+			<!-- IF LOGIN_ERROR -->
+				<dl>
+					<dt>&nbsp;</dt>
+					<dd class="error">{LOGIN_ERROR}</dd>
+				</dl>
+			<!-- ENDIF -->
+
+			<dl>
+				<dt><label for="password">{L_PASSWORD}{L_COLON}</label></dt>
+				<dd><input type="password" tabindex="1" id="password" name="password" size="25" class="inputbox narrow" autocomplete="off" /></dd>
+			</dl>
+			{S_LOGIN_REDIRECT}
+			<dl>
+				<dt>&nbsp;</dt>
+				<dd>{S_HIDDEN_FIELDS}<input type="submit" name="login" id="login" class="button1" value="{L_LOGIN}" tabindex="2" /></dd>
+			</dl>
+		</fieldset>
+	</div>
+
+	</div>
+</div>
+
+</form>
+<div class="c-f-l"><div class="c-f-r"><div class="c-f-c">&nbsp;</div></div></div>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->

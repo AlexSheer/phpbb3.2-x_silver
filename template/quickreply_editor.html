@@ -1,0 +1,49 @@
+<div class="clear"></div>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/scripts.js"></script>
+<br /><br />
+<div id="f_quick_reply_h" style="display:none; margin-bottom:1.4em">
+	<div><div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><img style="padding-top:13px;padding-right:8px;float:left;cursor:pointer;" src="{T_THEME_PATH}/images/maximize.png" onclick="javascript:ShowHide('f_quick_reply','f_quick_reply_h','f_quick_reply');" alt="{L_EXPAND_VIEW}" title ="{L_EXPAND_VIEW}" /><div class="c-h-title"><h4>{L_QUICKREPLY}</h4></div></div></div></div>
+		<div class="c-f-l"><div class="c-f-r"><div class="c-f-c-2"></div></div></div>
+	</div>
+</div>
+
+<div id="f_quick_reply">
+	<script type="text/javascript">
+	<!--
+	tmp = 'f_quick_reply';
+	if(GetCookie(tmp) == '2')
+	{
+		ShowHide('f_quick_reply', 'f_quick_reply_h', 'f_quick_reply');
+	}
+	//-->
+	</script>
+	<div>
+		<div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><img style="padding-top:13px;padding-right:8px;float:left;cursor:pointer;" src="{T_THEME_PATH}/images/minimize.png" onclick="javascript:ShowHide('f_quick_reply','f_quick_reply_h','f_quick_reply');" alt="{L_COLLAPSE_VIEW}" title="{L_COLLAPSE_VIEW}" /><div class="c-h-title"><h4>{L_QUICKREPLY}</h4></div></div></div></div>
+		<form method="post" action="{U_QR_ACTION}" id="postform">
+		<!-- EVENT quickreply_editor_panel_before -->
+			<div id="f_quick_reply" class="panel nopadding">
+				<div class="inner">
+					<fieldset class="fields1" style="padding:5px 10px;">
+						<dl style="clear: left;">
+							<dt><label for="subject">{L_SUBJECT}{L_COLON}</label></dt>
+							<dd><input type="text" name="subject" id="subject" size="45" maxlength="124" tabindex="2" value="{SUBJECT}" class="inputbox autowidth" /></dd>
+						</dl>
+						<!-- EVENT quickreply_editor_message_before -->
+						<div id="message-box">
+							<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+						</div>
+						<!-- EVENT quickreply_editor_message_after -->
+					</fieldset>
+					<fieldset class="submit-buttons" style="border:none; border-top:1px solid #4D6C95; background-color: #90AFD7">
+						{S_FORM_TOKEN}
+						{QR_HIDDEN_FIELDS}
+						<input type="submit" accesskey="f" tabindex="6" name="preview" value="{L_FULL_EDITOR}" class="button2" id="qr_full_editor" />&nbsp;
+						<input type="submit" accesskey="s" tabindex="7" name="post" value="{L_SUBMIT}" class="button1" />&nbsp;
+					</fieldset>
+				</div>
+			</div>
+		<!-- EVENT quickreply_editor_panel_after -->
+		</form>
+		<div class="c-f-l"><div class="c-f-r"><div class="c-f-c">&nbsp;</div></div></div>
+	</div>
+</div>
