@@ -1,0 +1,18 @@
+/* DivTable.com */
+.div_table{
+	background: #ccd9ea;
+	border: 1px solid #4D6C95;
+}
+.divtablerow {
+	display: table-row;
+}
+
+.divtablecell {
+	display: table-cell;
+	padding: 3px 10px;
+	align-content: center;
+	text-align: center;
+}
+.divtablebody {
+	display: table-row-group;
+}
