@@ -34,7 +34,7 @@
 <!-- ENDIF -->
 
 <!-- EVENT index_body_stat_blocks_before -->
-	<br clear="all" />
+	<div style='clear:both'></div>
 <div><div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4>{L_FORUM} {L_STATISTICS}</h4></div></div></div></div></div>
 <div style="border-left: 1px solid #4D6C95;border-right: 1px solid #4D6C95; border-bottom: 1px solid #4D6C95">
 <!-- IF S_DISPLAY_ONLINE_LIST -->
@@ -79,26 +79,19 @@
 <div class="legend">
 	<br />
 	<div class="c-h-l"><div class="c-h-r"><div class="c-h-c"><div class="c-h-title"><h4>{L_FORUM} {L_LEGEND}</h4></div></div></div></div>
-	<table class="tablebg_trblx" width="100%" cellpadding="0" cellspacing="0">
-		<tr>
-			<td class="bg2" width="14%" align="center" style="padding:5px"><img src="{T_THEME_PATH}/images/forum_unread.png"></td>
-			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_read.png"></td>
-			<td class="bg2" width="15%" align="center"><img src="{T_THEME_PATH}/images/forum_unread_subforum.png" alt="" /></td>
-			<td class="bg2" width="15%" align="center"><img src="{T_THEME_PATH}/images/forum_read_subforum.png" alt="" /></td>
-			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_unread_locked.png"></td>
-			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_read_locked.png"></td>
-			<td class="bg2" width="14%" align="center"><img src="{T_THEME_PATH}/images/forum_link.png" alt="" /></td>
-		</tr>
-		<tr>
-			<td class="bg2" width="14%" align="center" style="padding:5px"><span>{L_UNREAD_POSTS}</span></td>
-			<td class="bg2" width="14%" align="center"><span>{L_NO_UNREAD_POSTS}</span></td>
-			<td class="bg2" width="15%" align="center"><span>{L_SUBFORUM}<br />{L_UNREAD_POSTS}</span></td>
-			<td class="bg2" width="15%" align="center"><span>{L_SUBFORUM}<br />{L_NO_UNREAD_POSTS}</span></td>
-			<td class="bg2" width="14%" align="center"><span>{L_FORUM_LOCKED}<br />{L_UNREAD_POSTS}</span></td>
-			<td class="bg2" width="14%" align="center"><span>{L_FORUM_LOCKED}<br />{L_NO_UNREAD_POSTS}</span></td>
-			<td class="bg2" width="14%" align="center"><span>{L_FORUM_LINK}</span></td>
-		</tr>
-	</table>
+	<div class="div_table">
+		<div class="divtablebody">
+			<div class="divtablerow">
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_unread.png" alt="" /><br /><span>{L_UNREAD_POSTS}</span></div>
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_read.png" alt="" /><br /><span>{L_NO_UNREAD_POSTS}</span></div>
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_unread_subforum.png" alt="" /><br /><span>{L_SUBFORUM}<br />{L_UNREAD_POSTS}</span></div>
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_read_subforum.png" alt="" /><br />{L_FORUM_LOCKED}<br />{L_UNREAD_POSTS}</div>
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_unread_locked.png" alt="" /><br /><span>{L_FORUM_LOCKED}<br />{L_UNREAD_POSTS}</span></div>
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_read_locked.png" alt="" /><br /><span>{L_FORUM_LOCKED}<br />{L_NO_UNREAD_POSTS}</span></div>
+				<div class="divtablecell"><img src="{T_THEME_PATH}/images/forum_link.png" alt="" /><br /><span>{L_FORUM_LINK}</span></div>
+			</div>
+		</div>
+	</div>
 	<div class="c-f-l"><div class="c-f-r"><div class="c-f-c"></div></div></div>
 </div>
 
